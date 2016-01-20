@@ -23,8 +23,8 @@ climate <- getData('worldclim', var='bio', res=10)
 plot(climate$bio1/10, main="Nhiet do trung binh nam")
 
 
-#get GBIF data for Po mu
-nn <- name_lookup("Fokienia hodginsii*", rank = "species")
+#get GBIF data for Rua ho guom - Pelochelys bibroni
+nn <- name_lookup("Pelochelys bibroni*", rank = "species")
 nn <- unique(nn$data$nubKey)
 nn <- na.omit(nn)
 df <- occ_search(taxonKey = nn, hasCoordinate = TRUE, limit = 500, return = "data")
